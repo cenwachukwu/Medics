@@ -17,7 +17,7 @@ class Navbar extends Component {
                             <Link to="/">Home</Link>
                         </li>
                         <li>
-                            <Link to="/Doctors">Find your doctor</Link>
+                            <Link to="/DoctorList">Find your doctor</Link>
                         </li>
                         <li>
                             <Link to="/CreateProfile">Doctors click here</Link>
