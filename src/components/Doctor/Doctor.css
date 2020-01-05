@@ -14,13 +14,14 @@
 }
 
 .Doctor__boxes--profile{
+    margin: 1rem;
     width: 100%;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-items: center;
-    border: 2px solid black;
+    border-bottom: 1px solid black;
 }
 
 .Doctor__boxes--name{
@@ -47,7 +48,7 @@ p{
     padding: 0;
 }
 .Doctor__insurance{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 100%;
     padding: 2rem;
     margin: 2rem auto;
@@ -55,15 +56,53 @@ p{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     justify-items: center;
+    align-items: center;
     column-gap: 1rem;
     row-gap: 3rem;
 }
 .DoctorList__box{
-    border: 2px solid black;
+    border: 0.5px solid rgb(28, 28, 28);
     width: 100%;
     height: 12rem;
     padding: 2rem 0;
 }
 .Doctor__insurance--ptag{
     margin: 0.5rem;
+}
+
+.Doctor__license--container{
+    padding: 1rem;
+    margin: 0 auto;
+    border-bottom: 0.5px solid rgb(28, 28, 28);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+}
+.Doctor__license-headerbox{
+    color: rgb(28, 28, 28);
+    font-size: 3rem;
+    padding-top: 4rem;
+    border-right: 0.5px solid rgb(28, 28, 28);
+    width: 100%;
+    margin: 1rem;
+    height: 12rem;
+}
+.Doctor__license{
+    font-size: 1.3rem;
+    margin: 1rem;
+    width: 100%;
+}
+
+.Doctor__license--text{
+    padding: 0.5rem;
+    margin: 1rem;
+    border-bottom: 0.5px solid rgb(28, 28, 28);
+}
+
+.Doctor__license--span{
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: rgb(28, 28, 28);
 }

@@ -28,27 +28,32 @@ function Doctor(props) {
                                         </div>
                                     )
                                 })}</div> : null}
-                                {doctor.licenses ? <div>{doctor.licenses.map((license, index) => {
-                                    return (
-                                        <div key={index + 0}>
-                                            <div>
-                                                <h2>{license.state}</h2>
-                                                <h2>{license.number}</h2>
+                                {doctor.licenses ? <div className="Doctor__license--container">
+                                    <div className="Doctor__license-headerbox">
+                                        <h3>Licenses</h3>
+                                    </div>
+                                    <div className="Doctor__license">{doctor.licenses.map((license, index) => {
+                                        return (
+
+                                            <div className="Doctor__license--text" key={index + 0}>
+                                                <p><span className="Doctor__license--span">{license.state}:</span> {license.number}</p>
                                             </div>
-                                        </div>
-                                    )
-                                })}</div> : null}
-                                {doctor.specialties ? <div>{doctor.specialties.map((speciality, index) => {
-                                    return (
-                                        <div key={index + 0}>
-                                            <div>
-                                                <h2>{speciality.name}</h2>
-                                                <h2>{speciality.description}</h2>
-                                                <h2>{speciality.actor}</h2>
+
+                                        )
+                                    })}</div>
+                                </div> : null}
+                                {doctor.specialties ? <div className="Doctor__license--container">
+                                    <div className="Doctor__license-headerbox">
+                                        <h3>Speciality</h3>
+                                    </div>
+                                    <div className="Doctor__license">{doctor.specialties.map((speciality, index) => {
+                                        return (
+                                            <div className="Doctor__license--text" key={index + 0}>
+                                                <p><span className="Doctor__license--span">{speciality.name}: </span> {speciality.description}</p>
                                             </div>
-                                        </div>
-                                    )
-                                })}</div> : null}
+                                        )
+                                    })}</div>
+                                </div> : null}
                                 {doctor.practices ? <div>{doctor.practices.map((practice, index) => {
                                     return (
                                         <div key={index + 0}>
