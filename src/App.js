@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-// import { BrowserRouter as Router, Route } from "react-router-dom";
-import { Router } from "@reach/router";
+import {render } from "react-router-dom";
+import { Router, Link } from "@reach/router";
 import Axios from 'axios'
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import CreateProfile from './components/CreateProfile/CreateProfile';
 import DoctorList from './components/DoctorList/DoctorList';
+import Doctor from './components/Doctor/Doctor';
 
 class App extends Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class App extends Component {
     Axios.get('https://med-directory-cen.herokuapp.com/directory')
       .then(res => {
         this.setState({ Doctors: res.data })
-        console.log(this.state.Doctors)
+        // console.log(this.state.Doctors)
       })
       .catch(err => {
         console.log(err)
@@ -28,10 +29,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Navbar />
         <Router>
-          <Navbar />
-          <Route path="/CreateProfile" exact component={CreateProfile} />
-          <Route path="/DoctorList" exact component={DoctorList} />
+          <CreateProfile path="/CreateProfile"/>
+          <DoctorList path="/DoctorList" Doctors={this.state.Doctors}/>
+          <Doctor path="/Doctor/:doctorid" Doctors={this.state.Doctors}/>
         </Router>
       </div>
     );

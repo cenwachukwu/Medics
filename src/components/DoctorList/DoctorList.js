@@ -1,16 +1,25 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from '@reach/router';
 import "./DoctorList.css";
 
-class DoctorList extends Component {
-    render() {
-        return (
-            <div>
-                <h1>DoctorList</h1>
-                <p><Link to="/DoctorList">View More</Link></p>
-            </div>
-        )
-    }
+function DoctorList(props) {
+    console.log(props.Doctors)
+    return (
+        <div>
+            <h1>DoctorList</h1>
+
+            {props.Doctors.map((doctor, index) => {
+                console.log(doctor)
+                return (
+                    <div key={index + 0}>
+                        <p>{doctor.profile[0].first_name} {doctor.profile[0].last_name}</p>
+                        <p><Link to={`/Doctor/${doctor._id}`}>View More</Link></p>
+                    </div>
+                )
+            })}
+        </div>
+    )
+
 }
 
 export default DoctorList;
