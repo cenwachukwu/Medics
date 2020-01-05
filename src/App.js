@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Router } from "@reach/router";
 import Axios from 'axios'
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
