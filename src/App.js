@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import {render } from "react-router-dom";
-import { Router, Link } from "@reach/router";
+import { Router} from "@reach/router";
 import Axios from 'axios'
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
