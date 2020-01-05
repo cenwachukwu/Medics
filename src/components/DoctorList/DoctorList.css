@@ -1,11 +1,19 @@
+.DoctorList__container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    /* border: 2px solid black; */
+}
 
 .DoctorList__list{
+    /* border: 2px solid black; */
     width: 100%;
     padding: 2rem;
-    margin: 0 auto;
+    margin: 2rem auto;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
+    justify-items: center;
     column-gap: 1rem;
     row-gap: 3rem;
 }
@@ -13,7 +21,7 @@
 .DoctorList__box{
     border: 2px solid black;
     width: 85%;
-    height: 8rem;
+    height: 8.5rem;
     padding: 2rem 0;
 }
 
