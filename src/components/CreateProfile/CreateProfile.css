@@ -1,0 +1,22 @@
+.CreateprofileForm{
+    width: 100%;
+    height: 100%;
+}
+
+.createProfileHeader{
+    margin: 4rem auto;
+}
+
+input{
+    margin: 2rem auto;
+    width: 80%;
+    height: 75px;
+    border: 1px solid black;
+}
+.createProfileButton{
+    height: 2rem;
+    padding: 2rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin: 2rem;
+}

@@ -8,11 +8,11 @@ class Hamburger extends Component {
         return (
             <div>
                 <div className="Hamburger__wrapper">
-                    <input type="checkbox" class="toggler" />
-                    <div class="hamburger">
-                        <div class="hamburger-lines"></div>
+                    <input type="checkbox" className="toggler" />
+                    <div className="hamburger">
+                        <div className="hamburger-lines"></div>
                     </div>
-                    <div class="fixednavbar">
+                    <div className="fixednavbar">
                         <div>
                             <div>
                                 <ul>
