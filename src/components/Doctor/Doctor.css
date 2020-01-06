@@ -64,7 +64,7 @@ p{
 .Doctor__Insurance--box{
     /* margin: 1rem; */
     border: 1px solid black;
-    width: 100%;
+    width: 95%;
     height: 8.5rem;
     padding: 0.5rem;
     padding-top: 1;
@@ -73,7 +73,7 @@ p{
 
 .Doctor__insurance--ptag{
     margin: 0.2rem;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .Doctor__license--container{
@@ -139,4 +139,14 @@ p{
 }
 .education{
     border-top: 0.5px solid rgb(28, 28, 28);
+}
+
+.xyz{
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: black;
+    padding: 1rem;
+}
+.yzx{
+    margin: 1rem;
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from '@reach/router';
 import './Doctor.css';
 
 function Doctor(props) {
@@ -25,7 +26,7 @@ function Doctor(props) {
                                     <div className="Doctor__license">{doctor.educations.map((education, index) => {
                                         return (
                                             <div key={index + 0} className="Doctor__license--text">
-                                                    <p><span className="Doctor__Practise--span">{education.degree}: </span>{education.school}</p>
+                                                <p><span className="Doctor__Practise--span">{education.degree}: </span>{education.school}</p>
                                             </div>
                                         )
                                     })}</div>
@@ -95,6 +96,9 @@ function Doctor(props) {
                         )
                     }
                 })}
+                <div className="yzx">
+                    <Link to="/DoctorList" className="atag"><button className="xyz">back</button></Link>
+                </div>
             </div>
         </div>
 
