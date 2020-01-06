@@ -236,7 +236,7 @@ p{
         font-size: 0.8rem;
     }
 }
-@media only screen and (max-width: 375px){
+@media only screen and (max-width: 375px),(max-width: 414px){
     .Doctor__boxes--name{
         font-size: 1.5rem;
         width: 100%;
@@ -261,9 +261,7 @@ p{
         border: none;
         border: 0.5px solid rgb(28, 28, 28);
     }
-    /* .Doctor__insurance--container{
-        padding: 1rem;
-    } */
+    
     .Doctor__insurance{
         position: relative;
         padding: 1rem;
