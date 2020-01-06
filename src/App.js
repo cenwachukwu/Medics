@@ -7,6 +7,9 @@ import CreateProfile from './components/CreateProfile/CreateProfile';
 import DoctorList from './components/DoctorList/DoctorList';
 import Doctor from './components/Doctor/Doctor';
 import MobileNav from './components/MobileNav/MobileNav';
+import DoctorsClickHere from './components/DoctorsClickHere/DoctorsClickHere';
+import EditProfile from './components/EditProfile/EditProfile';
+import DeleteProfile from './components/DeleteProfile/DeleteProfile';
 
 class App extends Component {
   constructor(props) {
@@ -32,7 +35,10 @@ class App extends Component {
         <Navbar />
         <MobileNav/>
         <Router>
+          <DeleteProfile path="/DeleteProfile"/>
           <CreateProfile path="/CreateProfile"/>
+          <EditProfile path="/EditProfile"/>
+          <DoctorsClickHere path="/myaccount"/>
           <DoctorList path="/DoctorList" Doctors={this.state.Doctors}/>
           <Doctor path="/Doctor/:doctorid" Doctors={this.state.Doctors}/>
         </Router>

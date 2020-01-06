@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
+import { Link } from '@reach/router';
 import "./CreateProfile.css";
 
 class CreateProfile extends Component {
@@ -385,6 +386,9 @@ class CreateProfile extends Component {
                         </div>
                     </div>
                 </form>
+                <div className="yzx">
+                    <Link to="/myaccount" className="atag"><button className="xyz">back</button></Link>
+                </div>
             </div>
         )
     }

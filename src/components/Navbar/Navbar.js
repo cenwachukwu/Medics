@@ -25,7 +25,7 @@ class Navbar extends Component {
                                         <Link to="/DoctorList" className="atag">Find your doctor</Link>
                                     </li>
                                     <li>
-                                        <Link to="/CreateProfile" className="atag">Doctors click here</Link>
+                                        <Link to="/myaccount" className="atag">Doctors click here</Link>
                                     </li>
                                 </ul>
                             </div>
