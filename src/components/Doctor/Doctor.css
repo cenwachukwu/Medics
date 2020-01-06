@@ -166,6 +166,15 @@ p{
         width: 100%;
     }
 }
+@media only screen and (max-width: 1024px){
+    .Doctor__license--text{
+        font-size: 1rem;
+    }
+    .Doctor__Practice-headerbox{
+        font-size: 1rem;
+    }
+}
+
 @media only screen and (max-width: 892px){
     .Doctor__boxes--name{
         font-size: 3rem;
@@ -282,6 +291,11 @@ p{
     }
     .Doctor__Practise--span{
         font-size: 0.7rem;
+    }
+}
+@media only screen and (max-width: 320px){
+    .Doctor__insurance--ptag{
+        font-size: 0.4rem;
     }
 }
 

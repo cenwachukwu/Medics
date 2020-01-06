@@ -6,6 +6,7 @@ import Navbar from './components/Navbar/Navbar';
 import CreateProfile from './components/CreateProfile/CreateProfile';
 import DoctorList from './components/DoctorList/DoctorList';
 import Doctor from './components/Doctor/Doctor';
+import MobileNav from './components/MobileNav/MobileNav';
 
 class App extends Component {
   constructor(props) {
@@ -29,6 +30,7 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar />
+        <MobileNav/>
         <Router>
           <CreateProfile path="/CreateProfile"/>
           <DoctorList path="/DoctorList" Doctors={this.state.Doctors}/>
