@@ -4,6 +4,7 @@
     --menu-speed: 0.75s;
 }
 
+/* positioning of the toggler and hamburger */
 .toggler {
     position: absolute;
     top: 0;
@@ -34,7 +35,8 @@
     position: relative;
     flex: none;
     width: 100%;
-    height: 2px;
+    /* the height the basically the line */
+    height: 2px;   
     background: #fff;
     display: flex;
     align-items: center;
@@ -53,6 +55,23 @@
     background: inherit;
 }
 /* this next style brings out the third border */
-.Hamburger__wrapper .hamburger > div::after {
+.hamburger-lines::after {
     top: 10px;
+}
+
+/* at this point our hamburger is positioned and it has the lines */
+/* next we will animated the lines, so it rotates when we click on it i.e when the toggler is checked*/
+.Hamburger__wrapper .toggler:checked + .hamburger-lines {
+    transform: rotate(135deg);
+}
+/* Turns Lines Into X */ 
+.toggler:checked + .hamburger > div:before,
+.toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+}
+  
+/* Rotate On Hover When Checked */
+.toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
 }

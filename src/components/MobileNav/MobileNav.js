@@ -10,7 +10,7 @@ class MobileNav extends Component {
             <div className="MobileNav">
                 <div className="MobileNav__container">
                     <div className="MobileNav__logo">
-                        <Link to="/">
+                        <Link to="/" className="MobileNav__logoLink">
                             <h4 className="homeLogo">Medicx</h4>
                         </Link>
                     </div>
