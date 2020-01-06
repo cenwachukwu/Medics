@@ -296,7 +296,7 @@ class CreateProfile extends Component {
 
     render() {
         return (
-            <div>
+            <div className="WidthThang">
                 <form onSubmit={this.onSubmit}>
                     <div className="CreateprofileForm">
                         <h1 className="createProfileHeader">Fill out the form to create profile</h1>
@@ -325,7 +325,7 @@ class CreateProfile extends Component {
                             <input type="text" value={this.state.school} placeholder="Enter the name of your school" onChange={this.onChangeSchool} />
                         </div>
                         <div>
-                            <input type="text" value={this.state.degree} placeholder="Enter the degree you earned from the school mentioned above" onChange={this.onChangeDegree} />
+                            <input type="text" value={this.state.degree} placeholder="Degree you earned from the school mentioned above" onChange={this.onChangeDegree} />
                         </div>
                         <div>
                             <input type="text" value={this.state.license_number} placeholder="Enter your license number" onChange={this.onChangeLicense_number} />
@@ -370,24 +370,24 @@ class CreateProfile extends Component {
                             <input type="text" value={this.state.phone_type} placeholder="Land/Cell" onChange={this.onChangePhone_type} />
                         </div>
                         <div>
-                            <input type="text" value={this.state.language_name} placeholder="Enter the languages spoken at your practice eg. English and spanish" onChange={this.onChangeLanguage_name} />
+                            <input type="text" value={this.state.language_name} placeholder="Languages eg. English and spanish" onChange={this.onChangeLanguage_name} />
                         </div>
                         <div>
-                            <input type="text" value={this.state.category_types} placeholder="Enter the insurance category accepted at your practice eg. Medical, Vision" onChange={this.onChangeCategory_types} />
+                            <input type="text" value={this.state.category_types} placeholder="Insurance category eg. Medical, Vision" onChange={this.onChangeCategory_types} />
                         </div>
                         <div>
-                            <input type="text" value={this.state.insurance_uid} placeholder="Enter a valid insurance uid for your practice" onChange={this.onChangeInsurance_uid} />
+                            <input type="text" value={this.state.insurance_uid} placeholder="Valid insurance uid" onChange={this.onChangeInsurance_uid} />
                         </div>
                         <div>
-                            <input type="text" value={this.state.insurance_name} placeholder="Enter a valid name for the insurance accepted by your practice" onChange={this.onChangeInsurance_name} />
+                            <input type="text" value={this.state.insurance_name} placeholder="Valid insurance company name" onChange={this.onChangeInsurance_name} />
                         </div>
                         <div>
-                        <button type="submit" value="Submit" className="createProfileButton">Create New Profile</button>
+                        <button type="submit" value="Submit" className="xyz">Create New Profile</button>
                         </div>
                     </div>
                 </form>
                 <div className="yzx">
-                    <Link to="/myaccount" className="atag"><button className="xyz">back</button></Link>
+                    <Link to="/myaccount" className="atag"><button className="xyz back">back</button></Link>
                 </div>
             </div>
         )

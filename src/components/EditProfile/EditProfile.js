@@ -187,7 +187,7 @@ class EditProfile extends Component {
         }
         console.log(Profile); //eventually this is going to be where we submit the file to the database i.e do our post request
 
-        
+
 
 
         const Url = (`https://med-directory-cen.herokuapp.com/directory/${this.state.id}`);
@@ -219,12 +219,12 @@ class EditProfile extends Component {
 
     render() {
         return (
-            <div>
+            <div className="WidthThang">
                 <div className="topform">
                     <h1 className="EditProfileHeadr">Type in your last name to edit your profile!</h1>
                     <div>
                         <input className="topforminput" type="text" value={this.state.searchName} placeholder="Type in your last name" onChange={this.onSearchName} />
-                        <div className="Button-div" onClick={this.onFindProfile}>
+                        <div className="Button-div xyz" onClick={this.onFindProfile}>
                             <p className="Button-div-ptag">Find your profile</p>
                         </div>
                     </div>
@@ -282,14 +282,14 @@ class EditProfile extends Component {
                                     <input type="text" value={this.state.actor} placeholder="How would you like to be addressed eg. Cardiologist" onChange={this.onChangeActor} />
                                 </div>
                                 <div>
-                                    <input type="submit" placeholder="Edit Your Profile" />
+                                    <button type="submit" value="Submit" className="xyz">Edit Profile</button>
                                 </div>
                             </div>
                         )
                     })}
                 </form>
                 <div className="yzx">
-                    <Link to="/myaccount" className="atag"><button className="xyz">back</button></Link>
+                    <Link to="/myaccount" className="atag"><button className="xyz back">back</button></Link>
                 </div>
             </div >
         )
