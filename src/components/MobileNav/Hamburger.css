@@ -1,3 +1,4 @@
+/* colors i want to use throughout this styling */
 :root {
     --primary-color: rgba(0, 0, 0, 0.75);
     --overlay-color: rgba(16, 17, 17, 0.986);
@@ -75,3 +76,70 @@
 .toggler:checked:hover + .hamburger > div {
     transform: rotate(225deg);
 }
+
+/* hides the menu */
+/* also styles the menu */
+.Hamburger__wrapper .fixednavbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+}
+/* styling for the first classless div (please give your divs classnames) */
+.Hamburger__wrapper .fixednavbar > div {
+    background: var(--overlay-color);
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+}
+
+/* styling for the second classless div, this is the div that holds the ul, and sets the opacity to 0, so when we check it, the opacity changes to 1 */
+.Hamburger__wrapper .fixednavbar > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+/* styling for the ul */
+.Hamburger__wrapper .fixednavbar > div > div > ul > li {
+    list-style: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+  /*styling for the a tag  */
+.Hamburger__wrapper.fixednavbar > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+/* Shows Menu */
+.Hamburger__wrapper .toggler:checked ~ .fixednavbar {
+    visibility: visible;
+}
+/* animation for the navbar to appear */
+/* we are calling the tags this way (.Hamburger__wrapper .toggler:checked ~ .fixednavbar > div > div) because im lazy and 
+i didnt give the elements classnames, so if you give it classnames you dont have to do the nonsense*/
+.Hamburger__wrapper .toggler:checked ~ .fixednavbar > div {
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+}
+.Hamburger__wrapper .toggler:checked ~ .fixednavbar > div > div {
+    opacity: 1;
+    transition:  opacity 0.4s ease 0.4s;
+}
+
+
+  
+
+  
