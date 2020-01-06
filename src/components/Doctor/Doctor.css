@@ -264,7 +264,7 @@ p{
     
     .Doctor__insurance{
         position: relative;
-        padding: 1rem;
+        padding: 0.8rem;
         /* padding-right: -9rem; */
         row-gap: 1.5rem;
         column-gap: 0;
@@ -279,6 +279,9 @@ p{
     .Doctor__insurance--ptag{
         margin-top: 0.5rem;
         font-size: 0.6rem;
+    }
+    .Doctor__Practise--span{
+        font-size: 0.7rem;
     }
 }
 
