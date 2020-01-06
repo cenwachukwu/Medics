@@ -118,8 +118,6 @@ p{
     flex-direction: row;
     align-items: center;
     justify-items: center;
-    font-size: 1rem;
-    /* padding: 1rem; */
 }
 
 .Doctor__Practice{
@@ -187,3 +185,102 @@ p{
     }
     
 }
+@media only screen and (max-width: 892px){
+    .Doctor__boxes--name{
+        font-size: 2.6rem;
+        width: 95%;
+    }
+    .Doctor__boxes--description{
+        font-size: 0.8rem;
+    }
+    .Doctor__license--text{
+        font-size: 0.8rem;
+    }   
+}
+@media only screen and (max-width: 609px){
+    .Doctor__boxes--name{
+        font-size: 2.3rem;
+        width: 100%;
+    }
+    .Doctor__boxes--description{
+        font-size: 0.7rem;
+    }
+    .Doctor__license--text{
+        font-size: 0.7rem;
+    }  
+    .Doctor__license-headerbox{
+        font-size: 1rem;
+    } 
+    .Doctor__Insurance--box{
+        width: 100%;
+    }
+    .practiceheard{
+        padding-right: 2rem;
+    }
+}
+@media only screen and (max-width: 529px){
+    .Doctor__boxes--name{
+        font-size: 2.1rem;
+        width: 100%;
+    }
+    .Doctor__license-headerbox{
+        font-size: 0.8rem;
+    } 
+    .Doctor__Practise--span{
+        font-size: 0.8rem;
+    }
+    .Doctor__license--span{
+        font-size: 0.8rem;
+    }
+    .Doctor__Practice-headerbox{
+        font-size: 0.8rem;
+    }
+}
+@media only screen and (max-width: 375px){
+    .Doctor__boxes--name{
+        font-size: 1.5rem;
+        width: 100%;
+    }
+    .Doctor__license--container{
+        flex-direction: column;
+    }
+    .Doctor__license-headerbox{
+        padding: 1.5rem;
+        padding-top: 2rem;
+        border: none;
+        border-bottom: 0.5px solid rgb(28, 28, 28);
+        height: 100%;
+    }
+    .Doctor__license{
+        border: 0.5px solid rgb(28, 28, 28);
+    }
+    .Practice{
+        flex-direction: column;
+    }
+    .Doctor__Practice{
+        border: none;
+        border: 0.5px solid rgb(28, 28, 28);
+    }
+    /* .Doctor__insurance--container{
+        padding: 1rem;
+    } */
+    .Doctor__insurance{
+        position: relative;
+        padding: 1rem;
+        /* padding-right: -9rem; */
+        row-gap: 1.5rem;
+        column-gap: 0;
+        width: 100%;
+        border: 0.5px solid rgb(28, 28, 28);
+    }
+    .Doctor__Insurance--box{
+        position: relative;
+        width: 100%;
+        height: 10rem;
+    }
+    .Doctor__insurance--ptag{
+        margin-top: 0.5rem;
+        font-size: 0.6rem;
+    }
+}
+

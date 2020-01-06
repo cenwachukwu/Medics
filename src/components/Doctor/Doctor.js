@@ -58,14 +58,14 @@ function Doctor(props) {
                                     })}</div>
                                 </div> : null}
                                 {doctor.practices ? <div className="Doctor__license--container">
-                                    <div className="Doctor__license-headerbox">
+                                    <div className="Doctor__license-headerbox practiceheard">
                                         <h3>Practice(s)</h3>
                                     </div>
                                     <div className="Doctor__license">{doctor.practices.map((practice, index) => {
                                         return (
                                             <div className="Doctor__license--text Practice" key={index + 0}>
                                                 <div>
-                                                    <h2>{practice.name}</h2>
+                                                    <h2 className="Doctor__Practice-headerbox">{practice.name}</h2>
                                                 </div>
                                                 <div className="Doctor__Practice">
                                                     <p className="Doctor__Practise--pT"><span className="Doctor__Practise--span">Address: </span> {practice.visit_address[0].street}, {practice.visit_address[0].city}, {practice.visit_address[0].state} {practice.visit_address[0].zip}</p>
@@ -82,7 +82,7 @@ function Doctor(props) {
                                     {doctor.insurances ? <div className="Doctor__insurance">{doctor.insurances.map((insurance, index) => {
                                         return (
                                             <div key={index + 0} className="Doctor__Insurance--box">
-                                                <p className="Doctor__insurance--ptag"><span className="Doctor__Practise--span">Insurance Company: </span> {insurance.insurance_plan[0].name}</p>
+                                                <p className="Doctor__insurance--ptag"><span className="Doctor__Practise--span">Company: </span> {insurance.insurance_plan[0].name}</p>
                                                 <p className="Doctor__insurance--ptag"><span className="Doctor__Practise--span">Category: </span> {insurance.insurance_plan[0].category}</p>
                                                 <p className="Doctor__insurance--ptag"><span className="Doctor__Practise--span">UID: </span> {insurance.insurance_plan[0].uid}</p>
                                             </div>
