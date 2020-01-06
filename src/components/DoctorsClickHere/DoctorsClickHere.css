@@ -1,0 +1,36 @@
+.DoctorsClickHere-container{
+    margin: 0 auto;
+    padding: 2rem;
+    margin-top: 10rem;
+    width: 80%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+}
+
+.DoctorsClickHere-box{
+    margin: 1rem;
+    padding-top: 6rem;
+    font-size: 2rem;
+    border: 1px solid black;
+    border-radius: 5%;
+    width: 100%;
+    height: 15rem;
+}
+.DCHLink{
+    color: black;
+    text-decoration-color: black;
+}
+
+@media only screen and (max-width: 949px){
+    .DoctorsClickHere-container{
+        flex-direction: column;
+    }
+    .DoctorsClickHere-box{
+        width: 70%;
+        height: 15rem;
+    }
+}
+  

@@ -5,15 +5,15 @@ import "./DoctorsClickHere.css";
 function DoctorsClickHere() {
     return (
         <div className="DoctorsClickHere">
-            <div>
-                <div className="DoctorList__list">
-                    <p><Link to="/CreateProfile">Create profile</Link></p>
+            <div className="DoctorsClickHere-container">
+                <div className="DoctorsClickHere-box">
+                    <p><Link to="/CreateProfile" className="DCHLink">Create profile</Link></p>
                 </div>
-                <div className="DoctorList__list">
-                    <p><Link to="/EditProfile">Edit profile</Link></p>
+                <div className="DoctorsClickHere-box">
+                    <p><Link to="/EditProfile" className="DCHLink">Edit profile</Link></p>
                 </div>
-                <div className="DoctorList__list">
-                    <p><Link to="/DeleteProfile">Delete profile</Link></p>
+                <div className="DoctorsClickHere-box">
+                    <p><Link to="/DeleteProfile" className="DCHLink">Delete profile</Link></p>
                 </div>
             </div>
         </div>
