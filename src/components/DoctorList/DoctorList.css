@@ -29,3 +29,20 @@
 .DoctorList__box--specialties{
     margin: 0.5rem auto;
 }
+
+@media only screen and (max-width: 1075px){
+    .DoctorList__list{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media only screen and (max-width: 818px){
+    .DoctorList__list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 567px){
+    .DoctorList__list{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+  

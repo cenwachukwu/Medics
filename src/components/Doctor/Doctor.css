@@ -150,3 +150,40 @@ p{
 .yzx{
     margin: 1rem;
 }
+
+@media only screen and (max-width: 1322px){
+    .Doctor__insurance{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 1116px){
+    .Doctor__boxes--name{
+        font-size: 3rem;
+        width: 70%;
+    }
+    .Doctor__license-headerbox{
+        font-size: 2.2rem;
+    }
+    .Doctor__Insurance--box{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 892px){
+    .Doctor__boxes--name{
+        font-size: 3rem;
+        width: 85%;
+    }
+    .Doctor__license-headerbox{
+        font-size: 1.5rem;
+    }
+    .Doctor__insurance{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .Doctor__Insurance--box{
+        width: 70%;
+    }
+    .Doctor__license--text{
+        font-size: 1rem;
+    }
+    
+}
