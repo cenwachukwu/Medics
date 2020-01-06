@@ -18,16 +18,21 @@ function Doctor(props) {
                                         <p className="Doctor__boxes--description"> {doctor.profile[0].bio}</p>
                                     </div>
                                 </div>
-                                {doctor.educations ? <div>{doctor.educations.map((education, index) => {
-                                    return (
-                                        <div key={index + 0}>
-                                            <div>
-                                                <h2>{education.school}</h2>
-                                                <h2>{education.degree}</h2>
+                                {doctor.educations ? <div className="Doctor__license--container education">
+                                    <div className="Doctor__license-headerbox">
+                                        <h3>Education</h3>
+                                    </div>
+                                    <div className="Doctor__license">{doctor.educations.map((education, index) => {
+                                        return (
+                                            <div key={index + 0}>
+                                                <div>
+                                                    <h2>{education.school}</h2>
+                                                    <h2>{education.degree}</h2>
+                                                </div>
                                             </div>
-                                        </div>
-                                    )
-                                })}</div> : null}
+                                        )
+                                    })}</div>
+                                </div> : null}
                                 {doctor.licenses ? <div className="Doctor__license--container">
                                     <div className="Doctor__license-headerbox">
                                         <h3>Licenses</h3>
@@ -54,19 +59,26 @@ function Doctor(props) {
                                         )
                                     })}</div>
                                 </div> : null}
-                                {doctor.practices ? <div>{doctor.practices.map((practice, index) => {
-                                    return (
-                                        <div key={index + 0}>
-                                            <div>
-                                                <h2>{practice.name}</h2>
-                                                {practice.website ? <p>{practice.website}</p> : null}
-                                                <h2>{practice.visit_address[0].street}, {practice.visit_address[0].city}, {practice.visit_address[0].state} {practice.visit_address[0].zip}</h2>
-                                                <h2>{practice.phones[0].type}: {practice.phones[0].number}</h2>
-                                                <h2>language spoken: {practice.languages[0].name}</h2>
+                                {doctor.practices ? <div className="Doctor__license--container">
+                                    <div className="Doctor__license-headerbox">
+                                        <h3>Practice(s)</h3>
+                                    </div>
+                                    <div className="Doctor__license">{doctor.practices.map((practice, index) => {
+                                        return (
+                                            <div className="Doctor__license--text Practice" key={index + 0}>
+                                                <div>
+                                                    <h2>{practice.name}</h2>
+                                                </div>
+                                                <div className="Doctor__Practice">
+                                                    <p className="Doctor__Practise--pT"><span className="Doctor__Practise--span">Address: </span> {practice.visit_address[0].street}, {practice.visit_address[0].city}, {practice.visit_address[0].state} {practice.visit_address[0].zip}</p>
+                                                    <p className="Doctor__Practise--pT"><span className="Doctor__Practise--span">{practice.phones[0].type}: </span> {practice.phones[0].number}</p>
+                                                    <p className="Doctor__Practise--pT"><span className="Doctor__Practise--span">Language: </span> {practice.languages[0].name}</p>
+                                                    {practice.website ? <p className="Doctor__Practise--pT"><span className="Doctor__Practise--span">Website: </span>{practice.website}</p> : null}
+                                                </div>
                                             </div>
-                                        </div>
-                                    )
-                                })}</div> : null}
+                                        )
+                                    })}</div>
+                                </div> : null}
 
                                 <div className="Doctor__insurance--container">
                                     {doctor.insurances ? <div className="Doctor__insurance">{doctor.insurances.map((insurance, index) => {
