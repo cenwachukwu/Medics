@@ -21,6 +21,9 @@ class Navbar extends Component {
                                     <li >
                                         <Link to="/" className="atag">Home</Link>
                                     </li>
+                                    {/* <li >
+                                        <Link to="/SearchDoctors" className="atag">Search Doctors</Link>
+                                    </li> */}
                                     <li>
                                         <Link to="/DoctorList" className="atag">Find your doctor</Link>
                                     </li>

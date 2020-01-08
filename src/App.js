@@ -10,6 +10,11 @@ import MobileNav from './components/MobileNav/MobileNav';
 import DoctorsClickHere from './components/DoctorsClickHere/DoctorsClickHere';
 import EditProfile from './components/EditProfile/EditProfile';
 import DeleteProfile from './components/DeleteProfile/DeleteProfile';
+import Home from './components/Home/Home';
+import SearchDoctors from './components/SearchDoctors/SearchDoctors';
+import SearchByInsurance from './components/SearchbyInsurance/SearchByInsurance';
+import SearchByLastName from './components/SearchByLastName/SearchByLastName';
+import SearchBySpeciality from './components/SearchBySpeciality/SearchBySpeciality';
 
 class App extends Component {
   constructor(props) {
@@ -35,12 +40,18 @@ class App extends Component {
         <Navbar />
         <MobileNav/>
         <Router>
-          <DeleteProfile path="/DeleteProfile"/>
-          <CreateProfile path="/CreateProfile"/>
-          <EditProfile path="/EditProfile"/>
-          <DoctorsClickHere path="/myaccount"/>
-          <DoctorList path="/DoctorList" Doctors={this.state.Doctors}/>
+          <Home path="/"/>
+          <DeleteProfile path="DeleteProfile"/>
+          <CreateProfile path="CreateProfile"/>
+          <EditProfile path="EditProfile"/>
+          <DoctorsClickHere path="myaccount"/>
+          <DoctorList path="DoctorList" Doctors={this.state.Doctors}/>
           <Doctor path="/Doctor/:doctorid" Doctors={this.state.Doctors}/>
+          <SearchDoctors path="SearchDoctors">
+            <SearchByInsurance path="searchbyinsurance"/>
+            <SearchByLastName path="searchbyprofile"/>
+            <SearchBySpeciality path="searchbyspeciality"/>
+          </SearchDoctors>
         </Router>
       </div>
     );
