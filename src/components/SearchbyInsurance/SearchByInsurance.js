@@ -28,8 +28,9 @@ class SearchByInsurance extends Component {
     }
     onProfileNameChange = (evt) => {
         const query = evt.target.value;
-        console.log(query)
-        this.setState({ query: query }, () => {
+        const queryLowercase = query.toLowerCase()
+        console.log(queryLowercase)
+        this.setState({ query: queryLowercase }, () => {
             this.fetchResultsFromApi(query);
         });
     }
