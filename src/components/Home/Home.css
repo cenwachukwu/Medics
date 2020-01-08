@@ -1,9 +1,9 @@
 .Home__Container{
-    width: 90%;
+    width: 80%;
     height: 100%;
     /* border: 2px solid black; */
     margin: 2rem auto;
-    margin-top: 5rem;
+    /* margin-top: 3rem; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -12,7 +12,7 @@
 .Home__Image--Container{
     width: 100%;
     /* border: 2px solid black; */
-    margin: 3rem;
+    margin: 4rem;
     /* margin-left: -10rem; */
     /* padding: 2rem; */
     -webkit-transform:rotate(60deg);
@@ -28,8 +28,8 @@
 }
 .Home__Buttons--Container{
     width: 100%;
-    margin: 2rem;
-    padding: 1rem;
+    margin: 4rem;
+    padding: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,4 +43,99 @@
     margin: 1rem 0;
     height: 8rem;
     width: 25rem;
+}
+@media screen and (max-width:1229px){
+    .Home__Container{
+        width: 100%;
+    }
+    .Home__Image{
+        height: 27rem;
+        width: 27rem;
+    }
+    .Home__Buttons{
+        font-size: 1.5rem;
+        width: 23rem;
+    }
+}
+@media screen and (max-width:1124px){
+    .Home__Image{
+        width: 25rem;
+    }
+    .Home__Buttons{
+        font-size: 1.5rem;
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width:1024px){
+    .Home__Container{
+        width: 80%;
+        flex-direction: column;
+    }
+    .Home__Image--Container{
+        margin: 0 auto;
+        transform: none;
+        
+    }
+    .Home__Image{
+        height: 35rem;
+        width: 40rem;
+        padding: 2rem;
+    }
+    .Home__Buttons--Container{
+        padding-top: 5rem;
+        border: none;
+        border-top: 1px solid black;
+    }
+    .Home__Buttons{
+        margin: 2rem 0;
+        height: 8rem;
+        width: 30rem;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width:689px){
+    .Home__Container{
+        width: 100%;
+    }
+    .Home__Image{
+        width: 35rem;
+    }
+    .Home__Buttons--Container{
+        width: 80%;
+    }
+    .Home__Buttons{
+        margin: 2rem 0;
+        height: 8rem;
+        width: 25rem;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width:689px){
+    .Home__Image{
+        width: 35rem;
+    }
+    .Home__Buttons--Container{
+        width: 80%;
+    }
+    .Home__Buttons{
+        margin: 2rem 0;
+        height: 8rem;
+        width: 25rem;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width:554px){
+    .Home__Image{
+        width: 30rem;
+    }
+    .Home__Buttons--Container{
+        width: 80%;
+    }
+    .Home__Buttons{
+        width: 23rem;
+    }
 }
