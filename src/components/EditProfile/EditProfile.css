@@ -10,6 +10,11 @@
     font-size: 0.9rem;
 }
 
+.Width---Edit{
+    margin: 3rem;
+    min-height: 72vh;
+}
+
 .EditProfileHeadr{
     margin: 4rem;
 }

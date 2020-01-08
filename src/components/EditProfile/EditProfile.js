@@ -219,7 +219,7 @@ class EditProfile extends Component {
 
     render() {
         return (
-            <div className="WidthThang">
+            <div className="Width---Edit">
                 <div className="topform">
                     <h1 className="EditProfileHeadr">Type in your last name to edit your profile!</h1>
                     <div>
@@ -282,15 +282,16 @@ class EditProfile extends Component {
                                     <input type="text" value={this.state.actor} placeholder="How would you like to be addressed eg. Cardiologist" onChange={this.onChangeActor} />
                                 </div>
                                 <div>
-                                    <button type="submit" value="Submit" className="xyz">Edit Profile</button>
+                                    <button type="submit" value="Submit" className="xyz q">Edit Profile</button>
                                 </div>
                             </div>
                         )
                     })}
+                    {/* <div className="yzx">
+                        <Link to="/myaccount" className="atag"><button className="xyz back">back</button></Link>
+                    </div> */}
                 </form>
-                <div className="yzx">
-                    <Link to="/myaccount" className="atag"><button className="xyz back">back</button></Link>
-                </div>
+
             </div >
         )
     }

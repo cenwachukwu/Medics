@@ -38,7 +38,7 @@ class DeleteProfile extends Component {
     render() {
         // const { query, result } = this.state;
         return (
-            <div className="WidthThang">
+            <div className="WidthTha">
                 <form onSubmit={this.onSubmit}>
                     <div>
                         <h2 className="EditProfileHeadr">
@@ -52,9 +52,9 @@ class DeleteProfile extends Component {
                         </div>
                     </div>
                 </form>
-                <div className="yzx">
+                {/* <div className="yzx">
                     <Link to="/myaccount" className="atag"><button className="xyz back">back</button></Link>
-                </div>
+                </div> */}
             </div>
         )
     }

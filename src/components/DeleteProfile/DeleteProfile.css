@@ -2,6 +2,12 @@
     margin-top: 5rem;
     float: left;
 }
+
+.WidthTha{
+    height: 100%;
+    min-height: 77vh;
+}
+
 .WidthThang{
     margin: 0 auto;
     width: 80%;
