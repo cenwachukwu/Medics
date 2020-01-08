@@ -139,3 +139,24 @@
         width: 23rem;
     }
 }
+
+@media screen and (max-width:414px){
+    .Home__Image{
+        width: 25rem;
+        padding: 1rem;
+    }
+    .Home__Buttons{
+        width: 18rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:375px){
+    .Home__Image{
+        width: 20rem;
+    }
+    .Home__Buttons{
+        width: 17rem;
+        font-size: 1.5rem;
+    }
+}
