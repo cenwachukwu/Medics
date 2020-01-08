@@ -23,3 +23,48 @@
     background-color: black;
     color: white;
 }
+
+@media screen and (max-width:1353px){
+    .SearchDoctors__Buttons{
+        font-size: 2.5rem;
+        height: 12rem;
+        width: 18rem;
+    }
+}
+
+@media screen and (max-width:987px){
+    .SearchDoctors__Buttons{
+        font-size: 1.5rem;
+        height: 8rem;
+        width: 14rem;
+    }
+}
+
+@media screen and (max-width:779px){
+    .SearchDoctors__Container{
+        width: 100%;
+    }
+    .SearchDoctors__Buttons{
+        padding: 0.5rem;
+        font-size: 1.5rem;
+        height: 8rem;
+        width: 12rem;
+    }
+}
+
+@media screen and (max-width:574px){
+    .SearchDoctors__Container{
+        flex-direction: column;
+    }
+    .SearchDoctors__Buttons{
+        font-size: 2rem;
+        height: 8rem;
+        width: 18rem;
+    }
+}
+
+@media screen and (max-width:320px){
+    .SearchDoctors__Buttons{
+        width: 15rem;
+    }
+}

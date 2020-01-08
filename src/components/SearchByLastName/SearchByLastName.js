@@ -40,7 +40,7 @@ class SearchByLastName extends Component {
         return (
             <div className="SearchByLastName">
                 <div className="SSearchByLastName__Container">
-                    <input type="text" value={query} placeholder="find doctors by lastname eg Bloom " onChange={this.onProfileNameChange} />
+                    <input type="text" value={query} placeholder="Enter lastname eg Bloom " onChange={this.onProfileNameChange} />
                 </div>
                 <div className="DoctorList__list">
                     {this.state.result.map((doctor, index) => {
