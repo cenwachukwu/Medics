@@ -15,6 +15,7 @@ import SearchDoctors from './components/SearchDoctors/SearchDoctors';
 import SearchByInsurance from './components/SearchbyInsurance/SearchByInsurance';
 import SearchByLastName from './components/SearchByLastName/SearchByLastName';
 import SearchBySpeciality from './components/SearchBySpeciality/SearchBySpeciality';
+import Footer from './components/Footer/Footer/Footer';
 
 class App extends Component {
   constructor(props) {
@@ -53,6 +54,7 @@ class App extends Component {
             <SearchBySpeciality path="searchbyspeciality"/>
           </SearchDoctors>
         </Router>
+        <Footer/>
       </div>
     );
   }
