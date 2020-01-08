@@ -28,14 +28,15 @@ class SearchBySpeciality extends Component {
     }
     onProfileNameChange = (evt) => {
         const query = evt.target.value;
-        console.log(query)
-        this.setState({ query: query }, () => {
+        const queryCapitalized = query.charAt(0).toUpperCase() + query.slice(1)
+        console.log(queryCapitalized)
+        this.setState({ query: queryCapitalized }, () => {
             this.fetchResultsFromApi(query);
         });
     }
 
     render() {
-        const { query, result } = this.state;
+        const { query } = this.state;
         console.log(this.state)
         return (
             <div className="SearchByLastName">
