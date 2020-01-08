@@ -9,11 +9,14 @@ class Home extends Component {
         return (
             <div className="Home">
                 <div className="Home__Container">
-                    <img src={Image} height="45" width="45" />
-                    <div>
-                        <Link to="/SearchDoctors/searchbyprofile"><button>Search by Lastname</button></Link>
-                        <Link to="/SearchDoctors/searchbyinsurance"><button>Search by Insurance</button></Link>
-                        <Link to="/SearchDoctors/searchbyspeciality"><button>Search by Speciality</button></Link>
+                    <div className='Home__Image--Container'>
+                    <img src={Image} className='Home__Image'/>
+                    </div>
+                    
+                    <div className="Home__Buttons--Container">
+                        <Link to="/SearchDoctors/searchbyprofile"><button className="Home__Buttons">Search by Lastname</button></Link>
+                        <Link to="/SearchDoctors/searchbyinsurance"><button className="Home__Buttons">Search by Insurance</button></Link>
+                        <Link to="/SearchDoctors/searchbyspeciality"><button className="Home__Buttons">Search by Speciality</button></Link>
                     </div>
                 </div>
             </div>
