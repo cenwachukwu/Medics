@@ -9,13 +9,13 @@ class SearchDoctors extends Component {
             <div className="SearchDoctors">
                 <div className="SearchDoctors__Container">
                     <div>
-                        <Link to="/SearchDoctors/searchbyprofile"><button>Search by Lastname</button></Link>
+                        <Link to="/SearchDoctors/searchbyprofile"><button className="SearchDoctors__Buttons">Search by Lastname</button></Link>
                     </div>
                     <div>
-                        <Link to="/SearchDoctors/searchbyinsurance"><button>Search by Insurance</button></Link>
+                        <Link to="/SearchDoctors/searchbyinsurance"><button className="SearchDoctors__Buttons">Search by Insurance</button></Link>
                     </div>
                     <div>
-                        <Link to="/SearchDoctors/searchbyspeciality"><button>Search by Speciality</button></Link>
+                        <Link to="/SearchDoctors/searchbyspeciality"><button className="SearchDoctors__Buttons">Search by Speciality</button></Link>
                     </div>
                 </div>
                 {this.props.children}
