@@ -12,39 +12,42 @@ class SearchByInsurance extends Component {
             result: [], //to show the results
         };
     }
-    fetchResultsFromApi = (query) => {
-        const Url = `https://med-directory-cen.herokuapp.com/directory/insurances/${query}`;
+    fetchResultsFromApi = (evt) => {
+        evt.preventDefault();
+        const Url = `https://med-directory-cen.herokuapp.com/directory/insurances/${this.state.query}`;
         Axios.get(Url)
-            .then(res => {
-                console.log(res.data[0])
-                this.setState({
-                    result: res.data //now we set state of results to res.data[0]
-                })
-                console.log(this.state.result)
+        .then(res => {
+            console.log(res.data[0])
+            this.setState({
+                result: res.data //now we set state of results to res.data[0]
             })
-            .catch(err => {
-                console.log(err)
-            })
+            console.log(this.state.result)
+            {this.state.result.length ? console.log("insurance exists"): alert("Insurance does not exists")}
+        })
+        .catch(err => {
+            console.log(err)
+            alert("There was an error. Please check your entry")
+        })
+        this.setState({ query: "" });
     }
+    
     onProfileNameChange = (evt) => {
         const query = evt.target.value;
         const queryLowercase = query.toLowerCase()
-        console.log(queryLowercase)
-        this.setState({ query: queryLowercase }, () => {
-            this.fetchResultsFromApi(query);
-        });
+        this.setState({ query: queryLowercase });
     }
 
     render() {
-        const { query, result } = this.state;
+        const { query } = this.state;
         console.log(this.state)
         return (
             <div className="SearchByLastName">
                 <div className="SSearchByLastName__Container">
                     <input type="text" value={query} placeholder="Enter insurance uid eg healthnet-healthnetcaindividualfamilyppo " onChange={this.onProfileNameChange} />
+                    <button className="SearchButton" onClick={this.fetchResultsFromApi}>Find</button>
                 </div>
                 <div className="DoctorList__list">
-                    {this.state.result.map((doctor, index) => {
+                    {this.state.result.length ? this.state.result.map((doctor, index) => {
                         console.log(doctor)
                         return (
                             <div key={index + 0} className="DoctorList__box">
@@ -53,7 +56,7 @@ class SearchByInsurance extends Component {
                                 <p><Link to={`/Doctor/${doctor._id}`}>View More</Link></p>
                             </div>
                         )
-                    })}
+                    }) : null}
                 </div>
             </div>
         )

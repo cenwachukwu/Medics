@@ -19,7 +19,7 @@ function Doctor(props) {
                                         <p className="Doctor__boxes--description"> {doctor.profile[0].bio}</p>
                                     </div>
                                 </div>
-                                {doctor.educations ? <div className="Doctor__license--container education">
+                                {doctor.educations.length ? <div className="Doctor__license--container education">
                                     <div className="Doctor__license-headerbox">
                                         <h3>Education</h3>
                                     </div>
@@ -31,7 +31,7 @@ function Doctor(props) {
                                         )
                                     })}</div>
                                 </div> : null}
-                                {doctor.licenses ? <div className="Doctor__license--container">
+                                {doctor.licenses.length ? <div className="Doctor__license--container">
                                     <div className="Doctor__license-headerbox">
                                         <h3>Licenses</h3>
                                     </div>
@@ -45,7 +45,7 @@ function Doctor(props) {
                                         )
                                     })}</div>
                                 </div> : null}
-                                {doctor.specialties ? <div className="Doctor__license--container">
+                                {doctor.specialties.length ? <div className="Doctor__license--container">
                                     <div className="Doctor__license-headerbox">
                                         <h3>Speciality</h3>
                                     </div>
@@ -57,7 +57,7 @@ function Doctor(props) {
                                         )
                                     })}</div>
                                 </div> : null}
-                                {doctor.practices ? <div className="Doctor__license--container">
+                                {doctor.practices.length ? <div className="Doctor__license--container">
                                     <div className="Doctor__license-headerbox practiceheard">
                                         <h3>Practice(s)</h3>
                                     </div>
@@ -79,7 +79,7 @@ function Doctor(props) {
                                 </div> : null}
 
                                 <div className="Doctor__insurance--container">
-                                    {doctor.insurances ? <div className="Doctor__insurance">{doctor.insurances.map((insurance, index) => {
+                                    {doctor.insurances.length ? <div className="Doctor__insurance">{doctor.insurances.map((insurance, index) => {
                                         return (
                                             <div key={index + 0} className="Doctor__Insurance--box">
                                                 <p className="Doctor__insurance--ptag"><span className="Doctor__Practise--span">Company: </span> {insurance.insurance_plan[0].name}</p>

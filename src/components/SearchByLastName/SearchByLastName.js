@@ -23,7 +23,7 @@ class SearchByLastName extends Component {
                     result: res.data //now we set state of results to res.data[0]
                 })
                 console.log(this.state.result)
-                {this.state.result.length ? console.log("doctor exists"): alert("doctor does not exists")}
+                {this.state.result.length ? console.log("doctor exists"): alert("Doctor does not exists")}
             })
             .catch(err => {
                 console.log(err)
