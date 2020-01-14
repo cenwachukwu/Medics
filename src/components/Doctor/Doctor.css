@@ -158,6 +158,24 @@ p{
     margin: 1rem;
 }
 
+.SSearchByLastName__Container{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-items: center;
+    width: 65%;
+}
+.SearchButton{
+    width: 40%;
+    height: 4.5rem;
+    margin: 2rem;
+    justify-self: center;
+    font-size: 1.5rem;
+    border-radius: 5%;
+    border: 2px solid black;
+}
+
 @media only screen and (max-width: 1322px){
     .Doctor__insurance{
         grid-template-columns: repeat(2, 1fr);

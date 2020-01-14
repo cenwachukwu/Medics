@@ -12,8 +12,9 @@ class SearchBySpeciality extends Component {
             result: [], //to show the results
         };
     }
-    fetchResultsFromApi = (query) => {
-        const Url = `https://med-directory-cen.herokuapp.com/directory/specialties/${query}`;
+    fetchResultsFromApi = (evt) => {
+        evt.preventDefault();
+        const Url = `https://med-directory-cen.herokuapp.com/directory/profile/${this.state.query}`;
         Axios.get(Url)
             .then(res => {
                 console.log(res.data[0])
@@ -21,18 +22,19 @@ class SearchBySpeciality extends Component {
                     result: res.data //now we set state of results to res.data[0]
                 })
                 console.log(this.state.result)
+                {this.state.result.length ? console.log("doctor exists"): alert("doctor does not exists")}
             })
             .catch(err => {
                 console.log(err)
+                alert("There was an error. Please check your entry")
             })
     }
+
     onProfileNameChange = (evt) => {
         const query = evt.target.value;
         const queryCapitalized = query.charAt(0).toUpperCase() + query.slice(1)
         console.log(queryCapitalized)
-        this.setState({ query: queryCapitalized }, () => {
-            this.fetchResultsFromApi(query);
-        });
+        this.setState({ query: queryCapitalized });
     }
 
     render() {
@@ -42,6 +44,7 @@ class SearchBySpeciality extends Component {
             <div className="SearchByLastName">
                 <div className="SSearchByLastName__Container">
                     <input type="text" value={query} placeholder="Enter speciality eg. Surgery" onChange={this.onProfileNameChange} />
+                    <button className="SearchButton" onClick={this.fetchResultsFromApi}>Find</button>
                 </div>
                 <div className="DoctorList__list">
                     {this.state.result.map((doctor, index) => {

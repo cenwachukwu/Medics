@@ -155,6 +155,7 @@ class EditProfile extends Component {
             })
             .catch(err => {
                 console.log(err)
+                alert("There was an error. Please check your entry")
             })
     }
 
