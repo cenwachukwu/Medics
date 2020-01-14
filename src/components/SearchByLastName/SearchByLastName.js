@@ -29,6 +29,7 @@ class SearchByLastName extends Component {
                 console.log(err)
                 alert("There was an error. Please check your entry")
             })
+        this.setState({ query: "" });
     }
 
     onProfileNameChange = (evt) => {

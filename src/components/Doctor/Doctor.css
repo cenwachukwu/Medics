@@ -327,6 +327,9 @@ p{
     .SSearchByLastName__Container{
         width: 95%;
     }
+    .SearchButton{
+        margin: 1rem;
+    }
 }
 @media only screen and (max-width: 320px){
     .Doctor__insurance--ptag{
