@@ -12,9 +12,10 @@ class SearchBySpeciality extends Component {
             result: [], //to show the results
         };
     }
+
     fetchResultsFromApi = (evt) => {
         evt.preventDefault();
-        const Url = `https://med-directory-cen.herokuapp.com/directory/profile/${this.state.query}`;
+        const Url = `https://med-directory-cen.herokuapp.com/directory/specialties/${this.state.query}`;
         Axios.get(Url)
             .then(res => {
                 console.log(res.data[0])
@@ -47,7 +48,7 @@ class SearchBySpeciality extends Component {
                     <button className="SearchButton" onClick={this.fetchResultsFromApi}>Find</button>
                 </div>
                 <div className="DoctorList__list">
-                    {this.state.result.map((doctor, index) => {
+                    {this.state.result.length ? this.state.result.map((doctor, index) => {
                         console.log(doctor)
                         return (
                             <div key={index + 0} className="DoctorList__box">
@@ -56,7 +57,7 @@ class SearchBySpeciality extends Component {
                                 <p><Link to={`/Doctor/${doctor._id}`}>View More</Link></p>
                             </div>
                         )
-                    })}
+                    }) : null}
                 </div>
             </div>
         )

@@ -175,6 +175,10 @@ p{
     border-radius: 5%;
     border: 2px solid black;
 }
+.SearchButton:hover{
+    background-color: rgb(28, 28, 28);
+    color: white;
+}
 
 @media only screen and (max-width: 1322px){
     .Doctor__insurance{
@@ -318,6 +322,10 @@ p{
     }
     .Doctor__Practise--span{
         font-size: 0.7rem;
+    }
+
+    .SSearchByLastName__Container{
+        width: 95%;
     }
 }
 @media only screen and (max-width: 320px){
