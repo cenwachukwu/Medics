@@ -179,6 +179,21 @@ p{
     background-color: rgb(28, 28, 28);
     color: white;
 }
+.Doctor__practice--container{
+    padding: 1rem;
+    margin: 0 auto;
+    border-bottom: 0.5px solid rgb(28, 28, 28);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.practiceheard{
+    border: none;
+    border-bottom: 0.5px solid rgb(28, 28, 28);
+}
 
 @media only screen and (max-width: 1322px){
     .Doctor__insurance{

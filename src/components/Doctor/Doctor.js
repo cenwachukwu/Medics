@@ -57,7 +57,7 @@ function Doctor(props) {
                                         )
                                     })}</div>
                                 </div> : null}
-                                {doctor.practices.length ? <div className="Doctor__license--container">
+                                {doctor.practices.length ? <div className="Doctor__practice--container">
                                     <div className="Doctor__license-headerbox practiceheard">
                                         <h3>Practice(s)</h3>
                                     </div>
