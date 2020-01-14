@@ -190,6 +190,10 @@ p{
     justify-items: center;
 }
 
+.Doctor__Practice-headerbox--Container{
+    width: 100%;
+}
+
 .practiceheard{
     border: none;
     border-bottom: 0.5px solid rgb(28, 28, 28);

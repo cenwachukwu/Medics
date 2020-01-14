@@ -64,7 +64,7 @@ function Doctor(props) {
                                     <div className="Doctor__license">{doctor.practices.map((practice, index) => {
                                         return (
                                             <div className="Doctor__license--text Practice" key={index + 0}>
-                                                <div>
+                                                <div className="Doctor__Practice-headerbox--Container">
                                                     <h2 className="Doctor__Practice-headerbox">{practice.name}</h2>
                                                 </div>
                                                 <div className="Doctor__Practice">

@@ -46,8 +46,10 @@ class EditProfile extends Component {
     }
 
     onSearchName(evt) {
+        const query = evt.target.value;
+        const queryCapitalized = query.charAt(0).toUpperCase() + query.slice(1)
         this.setState({
-            searchName: evt.target.value
+            searchName: queryCapitalized
         });
     }
 
@@ -143,8 +145,8 @@ class EditProfile extends Component {
                     gender: res.data[0].profile[0].gender,
                     bio: res.data[0].profile[0].bio,
                     image_url: res.data[0].profile[0].image_url,
-                    school: res.data[0].educations[0].school,
-                    degree: res.data[0].educations[0].degree,
+                    // school: res.data[0].educations[0].school,
+                    // degree: res.data[0].educations[0].degree,
                     license_number: res.data[0].licenses[0].number,
                     license_state: res.data[0].licenses[0].state,
                     specialties_name: res.data[0].specialties[0].name,
@@ -157,6 +159,7 @@ class EditProfile extends Component {
                 console.log(err)
                 alert("There was an error. Please check your entry")
             })
+        this.setState({ searchName: "" });
     }
 
     onSubmit(evt) {
