@@ -23,7 +23,7 @@ class SearchBySpeciality extends Component {
                     result: res.data //now we set state of results to res.data[0]
                 })
                 console.log(this.state.result)
-                {this.state.result.length ? console.log("speciality exists"): alert("Speciality does not exists")}
+                {this.state.result.length ? console.log("speciality exists"): alert("Speciality does not exist")}
             })
             .catch(err => {
                 console.log(err)

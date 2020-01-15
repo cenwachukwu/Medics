@@ -22,7 +22,7 @@ class SearchByInsurance extends Component {
                 result: res.data //now we set state of results to res.data[0]
             })
             console.log(this.state.result)
-            {this.state.result.length ? console.log("insurance exists"): alert("Insurance does not exists")}
+            {this.state.result.length ? console.log("insurance exists"): alert("Insurance does not exist")}
         })
         .catch(err => {
             console.log(err)
